@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #0633e4;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .links a {
+    margin: 0 1rem;
+    color:  #0633e4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .projects {
+    margin-top: 2rem;
+  }
+  
+  footer {
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: #eee;
+  }
+  
