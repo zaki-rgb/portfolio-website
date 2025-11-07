@@ -60,10 +60,10 @@ header {
     0 0 8px #a084f5,
     0 0 25px #a084f5,
     0 0 40px #a084f5;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Subtle animated sparkle overlay */
@@ -80,7 +80,6 @@ header {
   opacity: 0.4;
   mix-blend-mode: screen;
 }
-
 
 /* Projects container stacked vertically */
 .projects {
@@ -151,16 +150,4 @@ footer {
     opacity: 1;
     transform: scale(1);
   }
-<<<<<<< HEAD
 }
-
-
-=======
-  
-  footer {
-    margin-top: 4rem;
-    padding: 1rem;
-    background-color: #eee;
-  }
-  
->>>>>>> 1bd0de461041b73b6aa56efc0c1cfa3cac32d778
