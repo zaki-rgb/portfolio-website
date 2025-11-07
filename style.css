@@ -1,32 +1,156 @@
+/* Body with outer-space radial gradient background */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at center, 
+    #0f2027 0%,    /* very dark blue/black */
+    #203a43 40%,   /* deep blue */
+    #2c5364 80%);  /* soft teal blue */
+  color: #eee;
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Modern header with translucent background */
+header {
+  background-color: rgba(0, 0, 20, 0.6);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Container for links stacked vertically */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Cosmic style buttons */
+.link-button, .project-button {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #f0e9ff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  width: 180px;
+  height: 45px;
+  line-height: 45px;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0 5px #6a82fb,
+    0 0 15px #6a82fb;
+  transition: 2s;
+}
+
+/* Hover glow effect */
+.link-button:hover, .project-button:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow:
+    0 0 8px #a084f5,
+    0 0 25px #a084f5,
+    0 0 40px #a084f5;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Subtle animated sparkle overlay */
+.link-button::before, .project-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 2%, transparent 70%);
+  animation: sparkle 4s linear infinite;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+
+/* Projects container stacked vertically */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.projects h2 {
+  margin-bottom: 1rem;
+}
+
+/* Footer styling consistent with header */
+footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 20, 0.6);
+  color: #ccc;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Full screen black overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: black;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fadeZoomOut 2s forwards;
+}
+
+/* Content zoom and fade in */
+.page-content {
+  transform: scale(1.1);
+  opacity: 0;
+  animation: zoomInFadeIn 2s forwards;
+  animation-delay: 0.5s; /* Start after overlay */
+}
+
+/* Keyframe for overlay fading and zooming out */
+@keyframes fadeZoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  header {
-    background-color: #0633e4;
-    color: white;
-    padding: 2rem;
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
   }
-  
-  .links a {
-    margin: 0 1rem;
-    color:  #0633e4;
-    text-decoration: none;
-    font-weight: bold;
+}
+
+/* Keyframe for content zooming in and fading in */
+@keyframes zoomInFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
   }
-  
-  .projects {
-    margin-top: 2rem;
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  footer {
-    margin-top: 4rem;
-    padding: 1rem;
-    background-color: #eee;
-  }
-  
+}
+
+
