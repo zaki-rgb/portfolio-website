@@ -151,6 +151,16 @@ footer {
     opacity: 1;
     transform: scale(1);
   }
+<<<<<<< HEAD
 }
 
 
+=======
+  
+  footer {
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: #eee;
+  }
+  
+>>>>>>> 1bd0de461041b73b6aa56efc0c1cfa3cac32d778
